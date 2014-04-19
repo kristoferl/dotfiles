@@ -1,5 +1,8 @@
 export JAVA_HOME=$(/usr/libexec/java_home)
 
+# Check for homebrew versions first
+export PATH=/usr/local/bin:$PATH
+
 # Scala installed via homebrew
 # To use with IntelliJ, set the Scala home to:
 export SCALA_HOME=/usr/local/opt/scala/idea
@@ -8,6 +11,8 @@ export SCALA_HOME=/usr/local/opt/scala/idea
 source /Users/kristofer/Projects/git-prompt/git-prompt
 export PS1="\$(git_prompt)"$PS1
 
+#Tomcat
+export CATALINA_HOME=/usr/local/Cellar/tomcat/7.0.53/libexec
 
 # https://gist.github.com/thelucid/6038901 - OSX Terminal – Tab and window shortcuts
 function tabname {
