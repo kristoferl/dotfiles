@@ -14,6 +14,13 @@ export PS1="\$(git_prompt)"$PS1
 #Tomcat
 export CATALINA_HOME=/usr/local/Cellar/tomcat/7.0.53/libexec
 
+bupdate() {
+    for action in update doctor upgrade cleanup
+    do
+        echo "--> brew $action" && brew $action
+    done
+}
+
 # https://gist.github.com/thelucid/6038901 - OSX Terminal – Tab and window shortcuts
 function tabname {
   # Will use current dir name if called without arg.
@@ -33,3 +40,10 @@ function tab {
 alias t='tab'
 alias tn='tabname'
 alias wn='winname'
+
+alias p1="tn 'SR P1'; mpg123 -@ http://sverigesradio.se/topsy/direkt/132-hi-mp3.m3u"
+alias p2="tn 'SR P2'; mpg123 -@ http://sverigesradio.se/topsy/direkt/163-hi-mp3.m3u"
+alias p2m="tn 'SR Klassiskt'; mpg123 -@ http://sverigesradio.se/topsy/direkt/1603-hi-mp3.m3u"
+alias p3="tn 'SR P3'; mpg123 -@ http://sverigesradio.se/topsy/direkt/164-hi-mp3.m3u"
+alias p4="tn 'SR P4'; mpg123 -@ http://sverigesradio.se/topsy/direkt/701-hi-mp3.m3u"
+alias p4s="tn 'SR Radiosporten'; mpg123 -@ http://sverigesradio.se/topsy/direkt/179-hi-mp3.m3u"
