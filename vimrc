@@ -1,0 +1,47 @@
+set nocompatible " explicitly get out of vi-compatible mode
+
+syntax on " syntax highlighting on
+syntax enable
+colorscheme atom-dark-256
+
+"set sw=4
+set smartcase
+
+set autoindent
+
+set relativenumber
+"set number
+
+set colorcolumn=+1
+"set cursorline
+
+
+"
+set incsearch " do highlight as you type you search phrase
+set laststatus=2 " always show the status line
+set ruler " Always show current positions along the bottom
+set scrolloff=10 " Keep 10 lines (top/bottom) for scope
+set showmatch " show matching brackets
+set showcmd " show the command being typed
+
+set expandtab " no real tabs please!
+set smarttab
+set ignorecase " case insensitive by default
+set nowrap " do not wrap line
+set shiftround " when at 3 spaces, and I hit > ... go to 4, not 5
+set shiftwidth=4 " auto-indent amount when using cindent, >>, << and stuff like that
+set softtabstop=4 " when hitting tab or backspace, how many spaces should a tab be (see expandtab)
+set tabstop=4 " real tabs should be 8, and they will show with set list on
+set ai " Auto indent
+set si " Smart indent
+
+set autoindent     " always set autoindenting on
+set smartindent        " smart indent
+set cindent            " cindent
+
+set hlsearch " Highlight search things
+
+set visualbell
+
+
+set title " Show title in console title bar
