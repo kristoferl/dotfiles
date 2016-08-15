@@ -5,6 +5,7 @@
 ```
 TODO
 ```
-- Add vim colorcheme
+- global gitignore and config
 - Instructions on how to get going (install.sh)
-- bin directory with "idea" script
+    ```ln -sf ~/Projects/dotfiles/vim .vim```
+
