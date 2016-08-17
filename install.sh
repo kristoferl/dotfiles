@@ -21,6 +21,6 @@ for f in $DIR/fish/*; do
   ln -fs "$f"
 done
 
-echo "Set up your git config using:"
-echo "git config --global user.email 'your.email@domain.com'"
-echo "git config --global user.name 'Your Name'"
+echo "Edit ~/.gitconfig_user to set your name and email. Eg."
+echo "name = Your username"
+echo "email = Your email"
