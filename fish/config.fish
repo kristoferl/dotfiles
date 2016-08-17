@@ -37,13 +37,7 @@ alias ls="ls -Gfh"
 alias ll="ls -Gflath"
 alias grep="grep --color=auto"
 
-### GET ALIAS ###
-# Set Private Git user
-alias gitpu="git config user.email kristofer.lovgren@gmail.com"
-# Set ViaPlay Git user
-alias gitvpu="git config user.email kristofer.lofgren@viaplay.com"
-
-## MAKE SUBLIME THE DEFAULT EDITOR ###
+## MAKE VIM THE DEFAULT EDITOR ###
 set -g EDITOR "vim"
 
 ## Swedish Radio Channel
@@ -55,17 +49,10 @@ alias p4="mpg123 -@ http://sverigesradio.se/topsy/direkt/701-hi-mp3.m3u"
 alias p4s="mpg123 -@ http://sverigesradio.se/topsy/direkt/179-hi-mp3.m3u"
 alias sisu="mpg123 -@ http://sverigesradio.se/topsy/direkt/226-hi-mp3.m3u"
 
+# PRETTY PRINT JSON
 alias pj="python -m json.tool"
 
 # http://benw.me/posts/colourized-pretty-printed-json-with-curl/
-#function jcurl() {
-#   curl -H "Accept: application/json" "$@" | python -m json.tool
-#}
-#export -f jcurl
 function jcurl
    curl -H "Accept: application/json" "$argv" | python -m json.tool
 end
-#function pj() {
-#   python -m json.tool "$@"
-#}
-#export -f pj

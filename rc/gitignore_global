@@ -1,0 +1,9 @@
+#vim
+*.swp
+
+#OS X
+.DS_Store
+
+# IntelliJ
+*.iml
+.idea
