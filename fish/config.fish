@@ -56,3 +56,15 @@ alias pj="python -m json.tool"
 function jcurl
    curl -H "Accept: application/json" "$argv" | python -m json.tool
 end
+
+
+# DOCKER
+# http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html
+function docker-remove-containers --description 'Remove all stopped containers'
+    docker rm (docker ps -a -q)
+end
+
+function docker-remove-images --description 'Remove all untagged images'
+    docker rmi (docker images | grep "^<none>" |  awk '{print $3}')
+end
+
