@@ -1,5 +1,6 @@
 #vim
 *.swp
+.netrwhist
 
 #OS X
 .DS_Store
