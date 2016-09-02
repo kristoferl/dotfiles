@@ -68,6 +68,7 @@ function docker-remove-images --description 'Remove all untagged images'
   docker rmi (docker images | grep "^<none>" |  awk '{print $3}')
 end
 
+# http://www.projectatomic.io/blog/2015/07/what-are-docker-none-none-images/
 function docker-remove-dangling-images -- description 'Remove all dangling images'
   docker rmi (docker images -f "dangling=true" -q)
 end
