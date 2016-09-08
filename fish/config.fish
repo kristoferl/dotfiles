@@ -57,6 +57,11 @@ function jcurl
   curl -H "Accept: application/json" "$argv" | python -m json.tool
 end
 
+# Pretty print XML
+function pxml
+    xmllint --format - $argv
+end
+
 
 # DOCKER
 # http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html
