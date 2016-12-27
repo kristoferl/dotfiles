@@ -4,11 +4,14 @@ set fish_greeting
 ### CHANGE LS COLORS ###
 set -g -x LSCOLORS gxfxbEaEBxxEhEhBaDaCaD
 
-### PATH ###
 #set default_path /usr/bin /usr/sbin /bin /sbin /usr/local/bin ~/bin
 #set homebrew /usr/local/bin /usr/local/sbin
 set homebrew /usr/local/bin
 set -g -x PATH $homebrew ~/bin $PATH
+
+# Scala installed via homebrew
+# To use with IntelliJ, set the Scala home to:
+set -g -x SCALA_HOME /usr/local/opt/scala/idea
 
 ### GIT PROMPT ###
 set -g __fish_git_prompt_showdirtystate "true"
@@ -62,6 +65,12 @@ function pxml
     xmllint --format - $argv
 end
 
+# Java
+# List available Java versions: /usr/libexec/java_home -V
+alias java8 "set -gx JAVA_HOME (/usr/libexec/java_home -v1.8)"
+alias java9 "set -gx JAVA_HOME (/usr/libexec/java_home -v9)"
+# Set Java version
+java8
 
 # DOCKER
 # http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html
