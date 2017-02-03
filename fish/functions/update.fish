@@ -9,8 +9,8 @@ function update --description 'Runs various update & upgrade commands'
   brew prune
   echo " >brew cleanup"
   brew cleanup -sf
-  echo " >brew doctor"
-  brew doctor
+  #echo " >brew doctor"
+  #brew doctor
 
   echo "# Upgrading apm"
   #echo " >apm update"
