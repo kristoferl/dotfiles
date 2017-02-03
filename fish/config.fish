@@ -13,6 +13,10 @@ set -g -x PATH $homebrew ~/bin $PATH
 # To use with IntelliJ, set the Scala home to:
 set -g -x SCALA_HOME /usr/local/opt/scala/idea
 
+# Groovy installed via Homebrew
+set -g -x GROOVY_HOME /usr/local/opt/groovy/libexec
+
+
 ### GIT PROMPT ###
 set -g __fish_git_prompt_showdirtystate "true"
 set -g __fish_git_prompt_showstashstate "true"

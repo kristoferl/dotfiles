@@ -22,12 +22,14 @@ function update --description 'Runs various update & upgrade commands'
 
   echo "# Upgrading cask"
   echo " >brew cask update"
-  brew cask update
+  #brew cask update
   # Workaround to update casks
   # Silenced error messages when brew cask installing
+  #echo "ATT! Cask upgrade is disabled at the moment. Unclear how to do it then 'brew cask update' should no longer be used"
   set -l CASKLIST (brew cask list 2>/dev/null)
   for cask in $CASKLIST
-    #brew cask install $cask
+  # Here it might be better to use 'brew cask reinstall'?
+    echo "    > Installing $cask"
     brew cask install $cask 2>/dev/null
   end
   echo " >brew cask cleanup"

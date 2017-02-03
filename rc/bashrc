@@ -8,6 +8,8 @@ export PATH=/usr/local/bin:$PATH
 # To use with IntelliJ, set the Scala home to:
 export SCALA_HOME=/usr/local/opt/scala/idea
 
+# Groovy installed via homebrew
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 alias ls='ls -Gp'
 alias ll='ls -Gpaltrh'
