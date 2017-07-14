@@ -91,3 +91,7 @@ end
 function docker-remove-dangling-images --description 'Remove all dangling images'
   docker rmi (docker images -f "dangling=true" -q)
 end
+
+function alert --description 'Display a notification with the supplied message'
+  osascript -e 'display notification with title "'$argv'" sound name "Pop"'
+end
