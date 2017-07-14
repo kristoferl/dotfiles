@@ -2,12 +2,13 @@
 set fish_greeting
 
 ### CHANGE LS COLORS ###
-set -g -x LSCOLORS gxfxbEaEBxxEhEhBaDaCaD
+#set -g -x LSCOLORS gxfxbEaEBxxEhEhBaDaCaD
+# https://www.cyberciti.biz/tips/freebsd-how-to-enable-colorized-ls-output.html
 
 #set default_path /usr/bin /usr/sbin /bin /sbin /usr/local/bin ~/bin
 #set homebrew /usr/local/bin /usr/local/sbin
 set homebrew /usr/local/bin
-set -g -x PATH $homebrew ~/bin $PATH
+set -g -x PATH ~/bin $homebrew $PATH
 
 # Scala installed via homebrew
 # To use with IntelliJ, set the Scala home to:
