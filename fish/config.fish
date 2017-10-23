@@ -10,6 +10,9 @@ set fish_greeting
 set homebrew /usr/local/bin
 set -g -x PATH ~/bin $homebrew $PATH
 
+# Add MTG tools to path
+set -g -x PATH $PATH /Users/kristofer/Projects/viaplay/tools/bin
+
 # Scala installed via homebrew
 # To use with IntelliJ, set the Scala home to:
 set -g -x SCALA_HOME /usr/local/opt/scala/idea
@@ -54,7 +57,7 @@ alias p2="mpg123 -@ http://sverigesradio.se/topsy/direkt/163-hi-mp3.m3u"
 alias p2m="mpg123 -@ http://sverigesradio.se/topsy/direkt/1603-hi-mp3.m3u"
 alias p3="mpg123 -@ http://sverigesradio.se/topsy/direkt/164-hi-mp3.m3u"
 alias p4="mpg123 -@ http://sverigesradio.se/topsy/direkt/701-hi-mp3.m3u"
-alias p4s="mpg123 -@ http://sverigesradio.se/topsy/direkt/179-hi-mp3.m3u"
+alias p4s="mpg123 -@ http://sverigesradio.se/topsy/direkt/701-hi-mp3.m3u"
 alias sisu="mpg123 -@ http://sverigesradio.se/topsy/direkt/226-hi-mp3.m3u"
 
 # PRETTY PRINT JSON
