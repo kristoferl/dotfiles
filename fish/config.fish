@@ -98,3 +98,7 @@ end
 function alert --description 'Display a notification with the supplied message'
   osascript -e 'display notification with title "'$argv'" sound name "Pop"'
 end
+
+# The initial 'play' command is used to start Spotify if it isn't open
+alias spiano="SpotifyControl play; sleep 1; SpotifyControl play https://open.spotify.com/user/spotify/playlist/37i9dQZF1DX4sWSpwq3LiO"
+
