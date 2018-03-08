@@ -2,7 +2,7 @@ set nocompatible " explicitly get out of vi-compatible mode
 
 syntax on " syntax highlighting on
 syntax enable
-colorscheme atom-dark-256
+colorscheme onedark
 
 "set sw=4
 set smartcase

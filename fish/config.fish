@@ -22,30 +22,31 @@ set -g -x GROOVY_HOME /usr/local/opt/groovy/libexec
 
 
 ### GIT PROMPT ###
+#set -g __fish_git_prompt_show_informative_status 1
 set -g __fish_git_prompt_showdirtystate "true"
 set -g __fish_git_prompt_showstashstate "true"
 set -g __fish_git_prompt_showuntrackedfiles "true"
 set -g __fish_git_prompt_showcolorhints "true"
 set -g __fish_git_prompt_showupstream "auto"
-set -g  __fish_git_prompt_color_branch yellow
+set -g __fish_git_prompt_color_branch yellow
 
 # configure fish git prompt
-set -g  __fish_git_prompt_char_dirtystate '✨ '
-set -g  __fish_git_prompt_char_stagedstate '→'
-set -g  __fish_git_prompt_char_stashstate '📦 '
-set -g  __fish_git_prompt_char_upstream_ahead '↑'
-set -g  __fish_git_prompt_char_upstream_behind '↓'
-set -g __fish_git_prompt_char_untrackedfiles '🆕 '
-set -g __fish_git_prompt_char_conflictedstate '✖'
-set -g __fish_git_prompt_char_cleanstate '✔'
+set -g __fish_git_prompt_char_dirtystate 'λ '
+set -g __fish_git_prompt_char_stagedstate '→ '
+set -g __fish_git_prompt_char_stashstate '⚑ '
+set -g __fish_git_prompt_char_upstream_ahead '↑ '
+set -g __fish_git_prompt_char_upstream_behind '↓ '
+set -g __fish_git_prompt_char_untrackedfiles '+ '
+set -g __fish_git_prompt_char_conflictedstate '✖ '
+set -g __fish_git_prompt_char_cleanstate '✔ '
 
 # GIT ALIASES
 alias gcm="git commit -m"
 alias glog="git log --oneline --abbrev-commit --all --graph --decorate --color"
 
 ### ALIAS ###
-alias ls="ls -Gfh"
-alias ll="ls -Gflath"
+alias ls="ls -GFh"
+alias ll="ls -GFhla"
 alias grep="grep --color=auto"
 
 ## MAKE VIM THE DEFAULT EDITOR ###
