@@ -8,10 +8,13 @@ set fish_greeting
 #set default_path /usr/bin /usr/sbin /bin /sbin /usr/local/bin ~/bin
 #set homebrew /usr/local/bin /usr/local/sbin
 set homebrew /usr/local/bin
-set -g -x PATH ~/bin $homebrew $PATH
+set -g -x PATH ~/bin $homebrew $python_path $PATH
 
 # Add MTG tools to path
 set -g -x PATH $PATH /Users/kristofer/Projects/viaplay/tools/bin
+
+# Add Rust/Cargo binaries
+set -g -x PATH $PATH /Users/kristofer/.cargo/bin
 
 # Scala installed via homebrew
 # To use with IntelliJ, set the Scala home to:
@@ -20,6 +23,8 @@ set -g -x SCALA_HOME /usr/local/opt/scala/idea
 # Groovy installed via Homebrew
 set -g -x GROOVY_HOME /usr/local/opt/groovy/libexec
 
+
+set -g -x LC_MESSAGES en_US
 
 ### GIT PROMPT ###
 #set -g __fish_git_prompt_show_informative_status 1
@@ -78,6 +83,8 @@ end
 # List available Java versions: /usr/libexec/java_home -V
 alias java8 "set -gx JAVA_HOME (/usr/libexec/java_home -v1.8)"
 alias java9 "set -gx JAVA_HOME (/usr/libexec/java_home -v9)"
+alias java10 "set -gx JAVA_HOME (/usr/libexec/java_home -v10)"
+alias java11 "set -gx JAVA_HOME (/usr/libexec/java_home -v11)"
 # Set Java version
 java8
 
@@ -85,6 +92,10 @@ java8
 # http://jimhoskins.com/2013/07/27/remove-untagged-docker-images.html
 function docker-remove-containers --description 'Remove all stopped containers'
   docker rm (docker ps -a -q)
+end
+
+function docker-remove-all-images --description 'Remove all images'
+  docker rmi (docker images | awk '{print $3}')
 end
 
 function docker-remove-images --description 'Remove all untagged images'
@@ -102,4 +113,3 @@ end
 
 # The initial 'play' command is used to start Spotify if it isn't open
 alias spiano="SpotifyControl play; sleep 1; SpotifyControl play spotify:user:spotify:playlist:37i9dQZF1DX4sWSpwq3LiO"
-
