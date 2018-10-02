@@ -10,9 +10,6 @@ set fish_greeting
 set homebrew /usr/local/bin
 set -g -x PATH ~/bin $homebrew $python_path $PATH
 
-# Add MTG tools to path
-set -g -x PATH $PATH /Users/kristofer/Projects/viaplay/tools/bin
-
 # Add Rust/Cargo binaries
 set -g -x PATH $PATH /Users/kristofer/.cargo/bin
 
