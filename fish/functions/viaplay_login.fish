@@ -1,4 +1,0 @@
-function viaplay_login
-    cp ~/Documents/ViaPlay/viaplay.settings.xml ~/.m2/settings.xml
-    cp ~/Documents/ViaPlay/scripts/npmrc ~/.npmrc
-end
