@@ -2,3 +2,7 @@
 if [ -f ~/.bashrc ]; then
   source ~/.bashrc
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/kristofer/.sdkman"
+[[ -s "/Users/kristofer/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/kristofer/.sdkman/bin/sdkman-init.sh"

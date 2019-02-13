@@ -67,6 +67,7 @@ plugins=(
   docker
   zsh-syntax-highlighting
   zsh-autosuggestions
+  osx
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -99,3 +100,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/kristofer/.sdkman"
+[[ -s "/Users/kristofer/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/kristofer/.sdkman/bin/sdkman-init.sh"
+
