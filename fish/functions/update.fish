@@ -5,8 +5,6 @@ function update --description 'Runs various update & upgrade commands'
   brew update
   echo " >brew upgrade"
   brew upgrade
-  echo " >brew prune"
-  brew prune
   echo " >brew cleanup"
   brew cleanup -s
   #echo " >brew doctor"
@@ -20,7 +18,7 @@ function update --description 'Runs various update & upgrade commands'
 
   echo "# Upgrading cask"
   # https://github.com/jseb/cask-upgrade
-  cask-upgrade -n
+  brew cask upgrade
 
   echo "# Update fish completions"
   fish -c "fish_update_completions"
