@@ -6,8 +6,6 @@ update () {
   echo " >brew upgrade"
   brew upgrade
   echo " >brew cleanup"
-  brew cleanup
-  echo " >brew cleanup"
   brew cleanup -s
   #echo " >brew doctor"
   #brew doctor
@@ -19,9 +17,7 @@ update () {
   apm clean
 
   echo "# Upgrading cask"
-  # https://github.com/jseb/cask-upgrade
-  #cask-upgrade -n
-  echo " > Skipped"
+  brew cask upgrade
 
   echo "# All done"
 }
