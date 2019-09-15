@@ -22,17 +22,3 @@ cd ~ || exit
 # TODO: Copy directly to .vim
 ln -fs "$DIR/vim"
 mv ~/vim ~/.vim
-
-# Copy user specific git config file
-cp "$DIR/files_to_copy/gitconfig_user" ~/.gitconfig_user
-
-# Symlink files in the fish folder
-mkdir -p ~/.config/fish
-cd ~/.config/fish || exit
-for f in $DIR/fish/*; do
-  ln -fs "$f"
-done
-
-echo "Edit ~/.gitconfig_user to set your name and email. Eg."
-echo "name = Your username"
-echo "email = Your email"
