@@ -10,7 +10,3 @@ It will replace your:
 - .vimrc
 - vim/
 
-```
-TODO
-```
-- Handle machine specific fish function
