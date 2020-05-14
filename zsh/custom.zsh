@@ -12,6 +12,8 @@ export EDITOR='vim'
 alias ls="ls -GFh"
 alias ll="ls -GFhla"
 alias grep="grep --color=auto"
+# https://unix.stackexchange.com/a/25329
+alias watch="watch "
 
 # GIT ALIASES
 alias gcm="git commit -m"

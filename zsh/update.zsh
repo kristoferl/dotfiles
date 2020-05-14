@@ -1,12 +1,11 @@
 update () {
-
+  echo "Update oh-my-zsh"
+  upgrade_oh_my_zsh
   echo "# Upgrading brew"
   echo " >brew update"
   brew update
   echo " >brew upgrade"
   brew upgrade
-  echo " >brew cleanup"
-  brew cleanup
   echo " >brew cleanup"
   brew cleanup -s
   #echo " >brew doctor"
@@ -19,9 +18,7 @@ update () {
   apm clean
 
   echo "# Upgrading cask"
-  # https://github.com/jseb/cask-upgrade
-  #cask-upgrade -n
-  echo " > Skipped"
+  brew cask upgrade
 
   echo "# All done"
 }

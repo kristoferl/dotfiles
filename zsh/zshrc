@@ -68,6 +68,7 @@ plugins=(
   zsh-syntax-highlighting
   zsh-autosuggestions
   osx
+  kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -104,4 +105,3 @@ source $ZSH/oh-my-zsh.sh
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/kristofer/.sdkman"
 [[ -s "/Users/kristofer/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/kristofer/.sdkman/bin/sdkman-init.sh"
-
