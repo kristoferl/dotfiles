@@ -1,6 +1,6 @@
 update () {
   echo "Update oh-my-zsh"
-  upgrade_oh_my_zsh
+  omz update
   echo "# Upgrading brew"
   echo " >brew update"
   brew update
