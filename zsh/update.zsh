@@ -18,7 +18,7 @@ update () {
   apm clean
 
   echo "# Upgrading cask"
-  brew cask upgrade
+  brew upgrade --cask
 
   echo "# All done"
 }
