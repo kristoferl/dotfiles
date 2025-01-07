@@ -1,6 +1,7 @@
 update () {
   echo "Update oh-my-zsh"
-  omz update
+  # Instead of running "omz update", run "zsh -i -c 'omz update'", this is because if an update i applied, the shell is restarted and the function is aborted.
+  zsh -i -c 'omz update'
   echo "# Upgrading brew"
   echo " >brew update"
   brew update
